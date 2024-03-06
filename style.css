@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+body {
+  padding: 30px;
+  background-color: #212222;
+  color: #fff;
+}
+.wrapper {
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.field {
+  border-radius: 8px;
+  position: relative;
+  padding: 18px 15px;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  color: #333;
+  background-color: #fff;
+}
+.field img {
+  width: 30px;
+  cursor: pointer;
+}
+.field input {
+  width: 100%;
+  border-radius: 8px;
+  border: 0;
+  outline: 0;
+  font-size: 24px;
+}
+.heading {
+  font-weight: 500;
+  font-size: 45px;
+}
+.heading span {
+  border-bottom: 5px solid rgb(0, 255, 191);
+  color: rgb(0, 255, 191);
+  font-weight: 500;
+  font-size: 45px;
+}
+.btn {
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: #333;
+  color: #fff;
+  margin-top: 20px;
+  border: 0;
+  outline: 0;
+  padding: 15px;
+  transition: 0.2s;
+}
+.btn:active {
+  transform: translateY(3px);
+}
+.btn img {
+  width: 15px;
+}
+.copy {
+  outline: 0;
+  border: 0;
+  background: transparent;
+}
+.label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-100%);
+  position: absolute;
+  right: -10px;
+  top: -25px;
+  font-size: 18px;
+  padding: 5px;
+  border-radius: 8px;
+  color: #fff;
+  background-color: rgb(6, 168, 74);
+  transition: 0.2s;
+}
+.label--active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0%);
+}
+.settings {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.settings__title {
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  font-size: 16px;
+}
+.settings__setting {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 50px;
+  background-color: #333;
+  border-radius: 8px;
+  padding: 10px 25px;
+}
+.settings__setting input {
+  display: none;
+}
+.setting__label::before,
+.setting__label::after {
+  content: "";
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  right: 10px;
+  cursor: pointer;
+  height: 30px;
+  width: 50px;
+  border-radius: 30px;
+  background-color: rgba(214, 214, 214, 0.5);
+  transition: 0.2s;
+}
+.setting__label::after {
+  height: 24px;
+  width: 24px;
+  border-radius: 60px;
+  right: 32px;
+  background-color: #fff;
+}
+.settings__setting input:checked + label:after {
+  right: 14px;
+}
+.settings__setting input:checked + label:before {
+  background-color: rgb(6, 168, 74);
+}
